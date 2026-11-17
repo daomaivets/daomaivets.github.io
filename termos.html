@@ -4,49 +4,240 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Termos de uso · DAO MAI VETS</title>
-<style>
-  :root { --bg: #F4EFE4; --card: #FFFFFF; --text: #1C2521; --muted: #6C7770; --accent: #1E3B30; --line: #B08D4C; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #121815; --card: #1B231F; --text: #E8E4DA; --muted: #9AA39D; --accent: #9CC5B0; --line: #C9A867; }
+<meta name="description" content="DAO MAI VETS: guia de pontos de acupuntura veterinária por meridiano e relógio circadiano.">
+<meta property="og:title" content="Termos de uso · DAO MAI VETS">
+<meta property="og:image" content="logo.png">
+<meta name="theme-color" content="#1E3B30">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Marcellus&display=swap" rel="stylesheet">
+<style>:root {
+  --bg: #F4EFE4; --surface: #FFFFFF; --surface-2: #FBF9F4; --ink: #1C2521; --muted: #6C7770;
+  --line: #E4DCCB; --jade: #1E3B30; --jade-2: #2D5545; --gold: #B08D4C; --gold-ink: #94722F;
+  --gold-soft: #D9C08E; --accent: var(--jade); --on-band: #F4EFE4; --band: #1E3B30;
+  --shadow: 0 1px 2px rgba(30,59,48,.06), 0 8px 24px rgba(30,59,48,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0F1613; --surface: #17201C; --surface-2: #131B17; --ink: #E9E4D8; --muted: #9AA39D;
+    --line: #26322C; --accent: #D9C08E; --gold-ink: #D9C08E; --band: #17201C; --on-band: #E9E4D8;
+    --shadow: none;
   }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text);
-         font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
-  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
-  .brand { font-family: Georgia, serif; letter-spacing: 3px; color: var(--accent); text-decoration: none;
-           display: inline-block; margin-bottom: 24px; border-bottom: 1.5px solid var(--line); }
-  article { background: var(--card); border-radius: 12px; padding: 28px 24px; }
-  h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 8px; color: var(--accent); }
-  h2 { font-size: 1.1rem; margin: 28px 0 8px; }
-  .meta { color: var(--muted); font-size: .9rem; margin-top: 0; }
-  a { color: var(--accent); }
-  ul, ol { padding-left: 1.3em; }
-  footer { color: var(--muted); font-size: .85rem; margin-top: 24px; text-align: center; }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 16px/1.65 "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-underline-offset: 3px; }
+h1, h2, h3 { font-family: Marcellus, Georgia, serif; font-weight: 400; line-height: 1.2; margin: 0; }
+svg { width: 1.25em; height: 1.25em; flex: none; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+@media (min-width: 720px) { .wrap { padding: 0 32px; } }
+.eyebrow { margin: 0 0 12px; color: var(--gold-ink); font-size: .8rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase; }
+.lead { font-size: 1.125rem; color: var(--muted); max-width: 40rem; margin: 16px 0 0; }
+
+/* Barra superior */
+.topbar { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.brand img { background: #F4EFE4; border-radius: 50%; padding: 3px; }
+.brand span { font-family: Marcellus, Georgia, serif; letter-spacing: .18em; font-size: .95rem; }
+.nav { display: flex; gap: 4px; }
+.nav a { color: var(--muted); text-decoration: none; font-size: .9rem; font-weight: 500;
+  padding: 6px 10px; border-radius: 8px; white-space: nowrap; }
+.nav a:hover { color: var(--ink); background: var(--surface); }
+.nav a[aria-current] { color: var(--ink); background: var(--surface); box-shadow: inset 0 -2px 0 var(--gold); }
+@media (max-width: 600px) { .brand span { display: none; } .nav a { padding: 6px 8px; font-size: .85rem; } }
+
+/* Início */
+.hero { padding: 56px 0 40px; background:
+  radial-gradient(60rem 30rem at 85% 20%, color-mix(in srgb, var(--gold) 14%, transparent), transparent 70%); }
+.hero-grid { display: grid; gap: 40px; align-items: center; }
+@media (min-width: 900px) { .hero { padding: 88px 0 72px; } .hero-grid { grid-template-columns: 1.25fr 1fr; } }
+.hero h1 { font-size: clamp(2rem, 5vw, 3.25rem); color: var(--accent); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin-top: 28px; }
+.store-pill { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px;
+  background: var(--jade); color: #F4EFE4; font-weight: 600; font-size: .95rem; }
+@media (prefers-color-scheme: dark) { .store-pill { background: var(--gold-soft); color: #1E3B30; } }
+.audience { color: var(--muted); font-size: .9rem; }
+.hero-art { display: flex; justify-content: center; align-items: center; }
+.seal { width: min(340px, 72vw); height: auto; aspect-ratio: 1; flex: none; border-radius: 50%; background: #FBF9F4;
+  display: grid; place-items: center; padding: 13%;
+  box-shadow: 0 0 0 1px var(--line), 0 0 0 12px var(--surface), 0 0 0 13px var(--gold-soft), 0 24px 60px rgba(30,59,48,.18); }
+.seal img { width: 100%; height: auto; }
+
+.stats { border-block: 1px solid var(--line); background: var(--surface); }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; }
+.stats-grid div { padding: 22px 8px; display: flex; flex-direction: column; gap: 2px; }
+.stats-grid div + div { border-left: 1px solid var(--line); }
+.stats strong { font-family: Marcellus, Georgia, serif; font-weight: 400; font-size: clamp(1.15rem, 3.5vw, 2rem);
+  color: var(--accent); line-height: 1.2; }
+.stats span { color: var(--muted); font-size: .85rem; }
+
+.section { padding: 72px 16px; }
+@media (min-width: 720px) { .section { padding: 96px 32px; } }
+.section-head { max-width: 40rem; margin-bottom: 40px; }
+.section-head h2 { font-size: clamp(1.6rem, 3.5vw, 2.25rem); }
+.features { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.feature, .doc-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+  padding: 24px; box-shadow: var(--shadow); }
+.feature h3, .doc-card h3 { font-size: 1.2rem; margin: 16px 0 6px; }
+.feature p, .doc-card p { margin: 0; color: var(--muted); }
+.feature-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center;
+  background: color-mix(in srgb, var(--gold) 14%, transparent); color: var(--gold-ink); }
+.feature-icon svg { width: 22px; height: 22px; }
+
+.band { background: var(--band); color: var(--on-band); }
+.band-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px;
+  padding-top: 40px; padding-bottom: 40px; }
+.band p { margin: 0; max-width: 46rem; font-family: Marcellus, Georgia, serif; font-size: 1.2rem; line-height: 1.5; }
+.band .link-arrow { color: var(--gold-soft); }
+.link-arrow { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; text-decoration: none; }
+.link-arrow svg { transition: transform .2s; }
+a:hover .link-arrow svg, .link-arrow:hover svg { transform: translateX(3px); }
+.cards-3 { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); }
+.doc-card { display: flex; flex-direction: column; text-decoration: none; color: var(--ink);
+  transition: border-color .2s, transform .2s; }
+.doc-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+.doc-card .link-arrow { margin-top: auto; padding-top: 20px; color: var(--accent); }
+
+/* Cabeçalho das páginas internas */
+.page-head { padding: 48px 0 32px; border-bottom: 1px solid var(--line); background:
+  radial-gradient(50rem 20rem at 90% 0%, color-mix(in srgb, var(--gold) 12%, transparent), transparent 70%); }
+@media (min-width: 720px) { .page-head { padding: 72px 0 48px; } }
+.page-head h1 { font-size: clamp(2rem, 5vw, 2.9rem); color: var(--accent); }
+.meta { display: inline-block; margin: 16px 0 0; padding: 4px 12px; border-radius: 999px; font-size: .85rem;
+  color: var(--muted); background: var(--surface); border: 1px solid var(--line); }
+
+/* Documentos legais */
+.doc-grid { display: grid; gap: 32px; padding-top: 40px; padding-bottom: 80px; }
+@media (min-width: 960px) { .doc-grid { grid-template-columns: 260px 1fr; gap: 56px; } }
+.toc { align-self: start; }
+@media (min-width: 960px) { .toc { position: sticky; top: 88px; max-height: calc(100vh - 110px); overflow: auto; } }
+@media (max-width: 959px) { .toc { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; } }
+.toc-title { margin: 0 0 8px; font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc a { display: flex; gap: 10px; padding: 6px 0; color: var(--muted); text-decoration: none; font-size: .9rem; line-height: 1.4; }
+.toc a span { color: var(--gold-ink); min-width: 1.2em; font-variant-numeric: tabular-nums; }
+.toc a:hover { color: var(--ink); }
+.doc { max-width: 46rem; min-width: 0; }
+.intro { font-size: 1.1rem; margin: 0 0 8px; padding-left: 18px; border-left: 3px solid var(--gold); }
+.doc-section { padding-top: 36px; scroll-margin-top: 80px; }
+.doc-section h2 { font-size: 1.4rem; display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; color: var(--accent); }
+.num { flex: none; display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
+  font-family: "IBM Plex Sans", sans-serif; font-size: .8rem; font-weight: 600; color: var(--gold-ink);
+  border: 1px solid var(--gold-soft); transform: translateY(-3px); }
+.doc p { margin: 0 0 12px; }
+.doc ul { margin: 0 0 12px; padding-left: 1.2em; }
+.doc li { margin: 4px 0; }
+.doc li::marker { color: var(--gold); }
+.contact-box { display: flex; gap: 14px; align-items: center; margin-top: 48px; padding: 20px 22px; border-radius: 14px;
+  background: var(--surface); border: 1px solid var(--line); }
+.contact-box > svg { color: var(--gold-ink); width: 24px; height: 24px; }
+
+/* Exclusão de conta */
+.section-tight { padding-top: 40px; padding-bottom: 80px; }
+.options, .data-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); }
+.data-grid { margin-top: 16px; }
+.option, .data-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 28px; box-shadow: var(--shadow); }
+.option h2 { font-size: 1.5rem; margin: 14px 0 16px; color: var(--accent); }
+.option p { margin: 0 0 12px; }
+.tag { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: .75rem; font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase; background: var(--jade); color: #F4EFE4; }
+@media (prefers-color-scheme: dark) { .tag { background: var(--gold-soft); color: #1E3B30; } }
+.tag-muted { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+@media (prefers-color-scheme: dark) { .tag-muted { background: transparent; color: var(--muted); } }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.steps li { display: flex; gap: 14px; align-items: center; }
+.steps span { flex: none; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center;
+  background: color-mix(in srgb, var(--gold) 16%, transparent); color: var(--gold-ink); font-weight: 600; font-size: .9rem; }
+.button { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; padding: 11px 18px; border-radius: 10px;
+  border: 1px solid var(--gold); color: var(--accent); text-decoration: none; font-weight: 600; }
+.button:hover { background: color-mix(in srgb, var(--gold) 12%, transparent); }
+.data-card h2 { font-family: "IBM Plex Sans", sans-serif; font-weight: 600; font-size: 1.05rem;
+  display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.data-card h2 svg { color: var(--gold-ink); }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.checks li { display: flex; gap: 10px; }
+.checks svg { color: var(--jade-2); margin-top: .2em; }
+@media (prefers-color-scheme: dark) { .checks svg { color: var(--gold-soft); } }
+.checks.muted li { color: var(--muted); }
+.checks.muted svg { color: var(--muted); }
+.footnote { margin: 32px 0 0; color: var(--muted); }
+
+/* Rodapé */
+.footer { border-top: 1px solid var(--line); background: var(--surface-2); padding: 40px 0 28px; }
+.footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; align-items: center; }
+.footer-brand { display: flex; gap: 12px; align-items: center; }
+.footer-brand img { background: #F4EFE4; border-radius: 50%; padding: 4px; }
+.footer-brand div { display: flex; flex-direction: column; line-height: 1.3; }
+.footer-brand strong { font-family: Marcellus, Georgia, serif; font-weight: 400; letter-spacing: .16em; }
+.footer-brand span { color: var(--muted); font-size: .85rem; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: .9rem; }
+.footer-links a { color: var(--muted); text-decoration: none; }
+.footer-links a:hover { color: var(--ink); }
+.footer-legal { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .8rem; }
+
+@media print {
+  .topbar, .toc, .footer, .hero-art { display: none; }
+  body { background: #fff; color: #000; }
+  .doc-grid { display: block; }
+}
 </style>
 </head>
 <body>
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="index.html"><img src="logo.png" alt="" width="36" height="36"><span>DAO MAI VETS</span></a>
+    <nav class="nav">
+      <a href="privacidade.html">Privacidade</a>
+      <a href="termos.html" aria-current="page">Termos</a>
+      <a href="excluir-conta.html">Excluir conta</a>
+    </nav>
+  </div>
+</header>
 <main>
-<a class="brand" href="index.html">DAO MAI VETS</a>
-<article>
-<h1>Termos de uso</h1>
-<p class="meta">Última atualização: 13 de novembro de 2026</p>
-<p>Estes Termos regulam o uso do aplicativo DAO MAI VETS, oferecido por DAO MAI VETS, inscrito sob o nº 12.345.678/0001-90. Ao criar uma conta, você declara que leu e aceita estes Termos e a Política de privacidade.</p>
-<h2>1. O que é o DAO MAI VETS</h2><p>O DAO MAI VETS é um guia de consulta sobre pontos de acupuntura veterinária. O aplicativo reúne localização anatômica, funções, indicações, observações e imagens dos pontos, organizados por meridiano e pelo relógio circadiano.</p>
-<h2>2. Quem pode usar</h2><p>O aplicativo é destinado a médicos-veterinários e a estudantes de Medicina Veterinária, maiores de 18 anos.</p><p>O número de inscrição no CRMV é opcional e não é verificado pelo aplicativo.</p>
-<h2>3. Sua conta</h2><ul><li>A conta é pessoal e intransferível. Não compartilhe seu login e sua senha.</li><li>Você é responsável pelas atividades realizadas com a sua conta.</li><li>Mantenha seus dados de cadastro corretos. Você pode editá-los no Perfil.</li><li>Se suspeitar de uso indevido da sua conta, altere a senha e avise pelo contato ao final.</li></ul>
-<h2>4. Natureza do conteúdo</h2><p>O conteúdo tem finalidade de consulta e apoio ao estudo. Ele não substitui a avaliação clínica do paciente, o diagnóstico nem o julgamento profissional do médico-veterinário.</p><p>A indicação e a realização de procedimentos de acupuntura em animais são de responsabilidade do profissional habilitado, conforme as normas do Conselho Federal e dos Conselhos Regionais de Medicina Veterinária.</p><p>Algumas informações podem estar incompletas ou em revisão e serão atualizadas ao longo do tempo. Campos ainda não cadastrados são indicados como tal no aplicativo.</p>
-<h2>5. Propriedade intelectual e uso permitido</h2><p>Textos, fotografias, ilustrações, o relógio circadiano, a organização do conteúdo, a marca e o logotipo DAO MAI VETS são protegidos pela legislação de direitos autorais e de propriedade industrial.</p><p>Você recebe uma licença pessoal, limitada, não exclusiva e revogável para consultar o conteúdo dentro do aplicativo, para uso profissional ou de estudo próprio.</p><p>Não é permitido, sem autorização por escrito:</p><ul><li>copiar, reproduzir, publicar, vender ou distribuir o conteúdo, no todo ou em parte;</li><li>capturar, gravar ou fotografar as telas do aplicativo para divulgar o conteúdo;</li><li>extrair dados de forma automatizada ou contornar as proteções técnicas do aplicativo;</li><li>usar a marca DAO MAI VETS sem autorização.</li></ul><p>O aplicativo bloqueia capturas de tela nas áreas com conteúdo dos pontos, como medida técnica de proteção.</p>
-<h2>6. Condutas proibidas</h2><ul><li>Usar o aplicativo para fins ilegais ou contrários a estes Termos.</li><li>Tentar acessar contas de outras pessoas ou áreas restritas do sistema.</li><li>Interferir no funcionamento do aplicativo ou dos servidores.</li><li>Criar contas com dados falsos ou em nome de terceiros.</li></ul>
-<h2>7. Disponibilidade e alterações do aplicativo</h2><p>Buscamos manter o aplicativo disponível, mas ele pode passar por interrupções para manutenção, atualização ou por falhas fora do nosso controle. Funcionalidades e conteúdos podem ser incluídos, alterados ou removidos.</p>
-<h2>8. Limitação de responsabilidade</h2><p>Na extensão permitida pela lei, não nos responsabilizamos por decisões clínicas tomadas com base no conteúdo do aplicativo, nem por danos decorrentes de uso em desacordo com estes Termos, de indisponibilidade temporária ou de falhas na conexão do seu aparelho.</p><p>Nada nestes Termos limita direitos garantidos a você pelo Código de Defesa do Consumidor, quando aplicável.</p>
-<h2>9. Encerramento da conta</h2><p>Você pode excluir sua conta a qualquer momento em Perfil → Excluir conta. A exclusão é imediata e definitiva.</p><p>Podemos suspender ou encerrar contas que violem estes Termos, com aviso por e-mail sempre que possível.</p>
-<h2>10. Alterações destes Termos</h2><p>Estes Termos podem ser atualizados. Mudanças relevantes serão comunicadas no aplicativo ou por e-mail. A data da última atualização aparece no topo deste documento.</p>
-<h2>11. Privacidade</h2><p>O tratamento dos seus dados pessoais está descrito na Política de privacidade, que faz parte destes Termos.</p>
-<h2>12. Lei aplicável e foro</h2><p>Estes Termos são regidos pelas leis da República Federativa do Brasil. Fica eleito o foro da comarca de São Paulo/SP, ressalvado o direito do consumidor de propor ação no foro do seu domicílio.</p>
-<h2>13. Contato</h2><p>Dúvidas sobre estes Termos: <a href="mailto:daomaivets@gmail.com">daomaivets@gmail.com</a>.</p>
+<section class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Documentos legais</p>
+    <h1>Termos de uso</h1>
+    <p class="meta">Última atualização: 13 de novembro de 2026</p>
+  </div>
+</section>
+<div class="wrap doc-grid">
+  <nav class="toc" aria-label="Nesta página">
+    <p class="toc-title">Nesta página</p>
+    <ol><li><a href="#secao-1"><span>1</span>O que é o DAO MAI VETS</a></li><li><a href="#secao-2"><span>2</span>Quem pode usar</a></li><li><a href="#secao-3"><span>3</span>Sua conta</a></li><li><a href="#secao-4"><span>4</span>Natureza do conteúdo</a></li><li><a href="#secao-5"><span>5</span>Propriedade intelectual e uso permitido</a></li><li><a href="#secao-6"><span>6</span>Condutas proibidas</a></li><li><a href="#secao-7"><span>7</span>Disponibilidade e alterações do aplicativo</a></li><li><a href="#secao-8"><span>8</span>Limitação de responsabilidade</a></li><li><a href="#secao-9"><span>9</span>Encerramento da conta</a></li><li><a href="#secao-10"><span>10</span>Alterações destes Termos</a></li><li><a href="#secao-11"><span>11</span>Privacidade</a></li><li><a href="#secao-12"><span>12</span>Lei aplicável e foro</a></li><li><a href="#secao-13"><span>13</span>Contato</a></li></ol>
+  </nav>
+  <article class="doc">
+    <p class="intro">Estes Termos regulam o uso do aplicativo DAO MAI VETS, oferecido por DAO MAI VETS, inscrito sob o nº 12.345.678/0001-90. Ao criar uma conta, você declara que leu e aceita estes Termos e a Política de privacidade.</p>
+    <section id="secao-1" class="doc-section"><h2><span class="num">1</span>O que é o DAO MAI VETS</h2><p>O DAO MAI VETS é um guia de consulta sobre pontos de acupuntura veterinária. O aplicativo reúne localização anatômica, funções, indicações, observações e imagens dos pontos, organizados por meridiano e pelo relógio circadiano.</p></section><section id="secao-2" class="doc-section"><h2><span class="num">2</span>Quem pode usar</h2><p>O aplicativo é destinado a médicos-veterinários e a estudantes de Medicina Veterinária, maiores de 18 anos.</p><p>O número de inscrição no CRMV é opcional e não é verificado pelo aplicativo.</p></section><section id="secao-3" class="doc-section"><h2><span class="num">3</span>Sua conta</h2><ul><li>A conta é pessoal e intransferível. Não compartilhe seu login e sua senha.</li><li>Você é responsável pelas atividades realizadas com a sua conta.</li><li>Mantenha seus dados de cadastro corretos. Você pode editá-los no Perfil.</li><li>Se suspeitar de uso indevido da sua conta, altere a senha e avise pelo contato ao final.</li></ul></section><section id="secao-4" class="doc-section"><h2><span class="num">4</span>Natureza do conteúdo</h2><p>O conteúdo tem finalidade de consulta e apoio ao estudo. Ele não substitui a avaliação clínica do paciente, o diagnóstico nem o julgamento profissional do médico-veterinário.</p><p>A indicação e a realização de procedimentos de acupuntura em animais são de responsabilidade do profissional habilitado, conforme as normas do Conselho Federal e dos Conselhos Regionais de Medicina Veterinária.</p><p>Algumas informações podem estar incompletas ou em revisão e serão atualizadas ao longo do tempo. Campos ainda não cadastrados são indicados como tal no aplicativo.</p></section><section id="secao-5" class="doc-section"><h2><span class="num">5</span>Propriedade intelectual e uso permitido</h2><p>Textos, fotografias, ilustrações, o relógio circadiano, a organização do conteúdo, a marca e o logotipo DAO MAI VETS são protegidos pela legislação de direitos autorais e de propriedade industrial.</p><p>Você recebe uma licença pessoal, limitada, não exclusiva e revogável para consultar o conteúdo dentro do aplicativo, para uso profissional ou de estudo próprio.</p><p>Não é permitido, sem autorização por escrito:</p><ul><li>copiar, reproduzir, publicar, vender ou distribuir o conteúdo, no todo ou em parte;</li><li>capturar, gravar ou fotografar as telas do aplicativo para divulgar o conteúdo;</li><li>extrair dados de forma automatizada ou contornar as proteções técnicas do aplicativo;</li><li>usar a marca DAO MAI VETS sem autorização.</li></ul><p>O aplicativo bloqueia capturas de tela nas áreas com conteúdo dos pontos, como medida técnica de proteção.</p></section><section id="secao-6" class="doc-section"><h2><span class="num">6</span>Condutas proibidas</h2><ul><li>Usar o aplicativo para fins ilegais ou contrários a estes Termos.</li><li>Tentar acessar contas de outras pessoas ou áreas restritas do sistema.</li><li>Interferir no funcionamento do aplicativo ou dos servidores.</li><li>Criar contas com dados falsos ou em nome de terceiros.</li></ul></section><section id="secao-7" class="doc-section"><h2><span class="num">7</span>Disponibilidade e alterações do aplicativo</h2><p>Buscamos manter o aplicativo disponível, mas ele pode passar por interrupções para manutenção, atualização ou por falhas fora do nosso controle. Funcionalidades e conteúdos podem ser incluídos, alterados ou removidos.</p></section><section id="secao-8" class="doc-section"><h2><span class="num">8</span>Limitação de responsabilidade</h2><p>Na extensão permitida pela lei, não nos responsabilizamos por decisões clínicas tomadas com base no conteúdo do aplicativo, nem por danos decorrentes de uso em desacordo com estes Termos, de indisponibilidade temporária ou de falhas na conexão do seu aparelho.</p><p>Nada nestes Termos limita direitos garantidos a você pelo Código de Defesa do Consumidor, quando aplicável.</p></section><section id="secao-9" class="doc-section"><h2><span class="num">9</span>Encerramento da conta</h2><p>Você pode excluir sua conta a qualquer momento em Perfil → Excluir conta. A exclusão é imediata e definitiva.</p><p>Podemos suspender ou encerrar contas que violem estes Termos, com aviso por e-mail sempre que possível.</p></section><section id="secao-10" class="doc-section"><h2><span class="num">10</span>Alterações destes Termos</h2><p>Estes Termos podem ser atualizados. Mudanças relevantes serão comunicadas no aplicativo ou por e-mail. A data da última atualização aparece no topo deste documento.</p></section><section id="secao-11" class="doc-section"><h2><span class="num">11</span>Privacidade</h2><p>O tratamento dos seus dados pessoais está descrito na Política de privacidade, que faz parte destes Termos.</p></section><section id="secao-12" class="doc-section"><h2><span class="num">12</span>Lei aplicável e foro</h2><p>Estes Termos são regidos pelas leis da República Federativa do Brasil. Fica eleito o foro da comarca de São Paulo/SP, ressalvado o direito do consumidor de propor ação no foro do seu domicílio.</p></section><section id="secao-13" class="doc-section"><h2><span class="num">13</span>Contato</h2><p>Dúvidas sobre estes Termos: <a href="mailto:daomaivets@gmail.com">daomaivets@gmail.com</a>.</p></section>
+    <aside class="contact-box">
+      <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg>
+      <div><strong>Dúvidas?</strong> Escreva para <a href="mailto:daomaivets@gmail.com">daomaivets@gmail.com</a>.</div>
+    </aside>
+  </article>
+</div>
 
-</article>
-<footer>DAO MAI VETS · <a href="mailto:daomaivets@gmail.com">daomaivets@gmail.com</a></footer>
 </main>
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img src="logo.png" alt="" width="44" height="44">
+      <div><strong>DAO MAI VETS</strong><span>Guia de acupuntura veterinária</span></div>
+    </div>
+    <nav class="footer-links">
+      <a href="privacidade.html">Política de privacidade</a>
+      <a href="termos.html">Termos de uso</a>
+      <a href="excluir-conta.html">Excluir conta</a>
+      <a href="mailto:daomaivets@gmail.com">daomaivets@gmail.com</a>
+    </nav>
+  </div>
+  <div class="wrap footer-legal">© 2026 DAO MAI VETS · CNPJ 12.345.678/0001-90</div>
+</footer>
 </body>
 </html>
