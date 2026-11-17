@@ -129,6 +129,15 @@ blockquote { margin: 0; font-family: Marcellus, Georgia, serif; font-size: clamp
 .prose p { margin: 0 0 18px; font-size: 1.05rem; }
 .prose blockquote { margin: 36px 0; }
 .intro { font-size: 1.15rem !important; }
+.team { margin-bottom: 48px; }
+.member { display: flex; gap: 16px; align-items: center; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 16px; padding: 20px; box-shadow: var(--shadow); }
+.avatar { flex: none; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center;
+  font-family: Marcellus, Georgia, serif; font-size: 1.15rem; letter-spacing: .06em; color: var(--gold-ink);
+  background: color-mix(in srgb, var(--gold) 14%, transparent); box-shadow: inset 0 0 0 1px var(--gold-soft); }
+.member h3 { font-size: 1.2rem; }
+.member p { margin: 0; color: var(--muted); font-size: .92rem; line-height: 1.45; }
+.member .role { color: var(--gold-ink); font-weight: 600; font-size: .8rem; letter-spacing: .06em; text-transform: uppercase; margin: 4px 0 2px; }
 .purpose { background: var(--band); color: var(--on-band); border-radius: 20px; padding: 32px; }
 .purpose .eyebrow { color: var(--gold-soft); }
 .purpose p:last-child { margin: 0; font-family: Marcellus, Georgia, serif; font-size: clamp(1.25rem, 2.6vw, 1.6rem); line-height: 1.4; }
@@ -336,6 +345,27 @@ body.bare { background:
 </article>
   </div>
 
+  <section class="team">
+    <header class="section-head">
+      <p class="eyebrow">Quem faz a DAO MAI VETS</p>
+      <h2>Três mulheres, um propósito</h2>
+    </header>
+    <div class="cards-3">
+      <article class="member">
+  <span class="avatar" aria-hidden="true">RS</span>
+  <div><h3>Roberta Santos</h3><p class="role">Médica-veterinária integrativa</p><p>Responsável principal pela DAO MAI VETS</p></div>
+</article>
+      <article class="member">
+  <span class="avatar" aria-hidden="true">AS</span>
+  <div><h3>Amanda Sahori</h3><p class="role">Controle, gestão e social media</p><p>Responsável pelo controle, pela gestão e pelas redes sociais</p></div>
+</article>
+      <article class="member">
+  <span class="avatar" aria-hidden="true">KS</span>
+  <div><h3>Karla Saraiva</h3><p class="role">Fotografia</p><p>Responsável pelas fotos</p></div>
+</article>
+    </div>
+  </section>
+
   <aside class="purpose">
     <p class="eyebrow">Nosso propósito</p>
     <p>Construir uma comunidade onde o conhecimento circule, profissionais se sintam apoiados e a medicina
@@ -376,7 +406,7 @@ body.bare { background:
         <a href="excluir-conta.html">Excluir conta</a></nav>
     </div>
   </div>
-  <div class="wrap footer-legal">© 2026 DAO MAI VETS · CNPJ 12.345.678/0001-90</div>
+  <div class="wrap footer-legal">© 2026 DAO MAI VETS · Responsável: Roberta Santos</div>
 </footer>
 </body>
 </html>
